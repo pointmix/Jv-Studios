@@ -1,2 +1,201 @@
-# Jv-Studios
-Marque seu horário 
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title> Jv Studios - Agendamento</title>
+
+    <link rel="stylesheet" href="estilo.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>✨ Jv Studios</h1>
+        <p>Beleza que realça você</p>
+    </header>
+
+    <main>
+
+        <section class="inicio">
+            <h2>Agende seu horário</h2>
+
+            <p>
+                Realce sua beleza com um olhar
+                mais expressivo e marcante.
+            </p>
+
+            <button onclick="mostrarServicos()">
+                AGENDAR AGORA
+            </button>
+        </section>
+
+
+        <section id="servicos">
+
+            <h2>Escolha seu procedimento</h2>
+
+            <div class="servico">
+                <h3> Depilação</h3>
+                <p>R$ 100,00</p>
+
+                <button onclick="selecionarServico('Lash Lifting', 100, 30)">
+                    Escolher
+                </button>
+            </div>
+
+
+            <div class="servico">
+                <h3>Cilios</h3>
+                <p>R$ 150,00</p>
+
+                <button onclick="selecionarServico('Volume Brasileiro', 150, 50)">
+                    Escolher
+                </button>
+            </div>
+
+
+            <div class="servico">
+                <h3>Marquinha de fita/h3>
+                <p>R$ 180,00</p>
+
+                <button onclick="selecionarServico('Volume Russo', 180, 50)">
+                    Escolher
+                </button>
+            </div>
+
+
+            <div class="servico">
+                <h3>Manutenção</h3>
+                <p>R$ 90,00</p>
+
+                <button onclick="selecionarServico('Manutenção', 90, 30)">
+                    Escolher
+                </button>
+            </div>
+
+        </section>
+
+
+        <section id="agendamento">
+
+            <h2>Escolha seu horário</h2>
+
+            <label>Data:</label>
+
+            <input type="date" id="data">
+
+
+            <h3>Horários disponíveis</h3>
+
+            <div class="horarios">
+
+                <button onclick="selecionarHorario('09:00')">
+                    09:00
+                </button>
+
+                <button onclick="selecionarHorario('11:00')">
+                    11:00
+                </button>
+
+                <button onclick="selecionarHorario('13:00')">
+                    13:00
+                </button>
+
+                <button onclick="selecionarHorario('15:00')">
+                    15:00
+                </button>
+
+                <button onclick="selecionarHorario('17:00')">
+                    17:00
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <section id="dados">
+
+            <h2>Seus dados</h2>
+
+            <input
+                type="text"
+                id="nome"
+                placeholder="Seu nome">
+
+            <input
+                type="tel"
+                id="whatsapp"
+                placeholder="WhatsApp">
+
+
+            <div id="resumo"></div>
+
+
+            <button onclick="confirmarAgendamento()">
+                Continuar para pagamento
+            </button>
+
+        </section>
+
+
+        <section id="pagamento">
+
+            <h2>Pagamento do adiantamento</h2>
+
+            <p>Reserve seu horário com segurança.</p>
+
+            <div class="pix">
+
+                <h3>Adiantamento</h3>
+
+                <strong id="valorAdiantamento">
+                    R$ 0,00
+                </strong>
+
+                <p>💠 PIX</p>
+
+                <button onclick="pagar()">
+                    PAGAR ADIANTAMENTO
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <section id="confirmacao">
+
+            <h2>✅ Agendamento confirmado!</h2>
+
+            <div id="dadosConfirmacao"></div>
+
+            <button onclick="whatsapp()">
+                📱 Confirmar pelo WhatsApp
+            </button>
+
+        </section>
+
+    </main>
+
+
+    <footer>
+
+        <p>
+            © 2026 Jv Studios
+        </p>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
